@@ -10,12 +10,12 @@ from scipy.optimize import curve_fit
 import matplotlib.pyplot as plt
 
 
-def temper_func(x, y):
-    return 300+(((x/y)/1.1)-1)/(4.5*10**(-3))
+def temper_quart_func(x, y):
+    return (300+(((x/y)/1.1)-1)/(4.5*10**(-3)))**4
 
 
 def stefan_func(x, a):
-    return a*x**4
+    return a*x
 
 
 if __name__ == '__main__':
@@ -28,14 +28,15 @@ if __name__ == '__main__':
     amp_data = np.array([0.636, 0.604, 0.561, 0.518, 0.475, 0.426, 0.374])
     areavoltamp_data = np.array([area_data, volt_data, amp_data])
     print(areavoltamp_data)
-    temper_data = temper_func(areavoltamp_data[1], areavoltamp_data[2])
-    print(temper_data)
+    temper_quart_data = temper_quart_func(areavoltamp_data[1], 
+                                          areavoltamp_data[2])
+    print(temper_quart_data)
 
-    popt, pcov = curve_fit(stefan_func, temper_data, areavoltamp_data[0],
+    popt, pcov = curve_fit(stefan_func, temper_quart_data, areavoltamp_data[0],
                            sigma=error_data, absolute_sigma=True)
     print(popt)
-    stefan_model = stefan_func(temper_data, popt)
-    plt.errorbar(temper_data, areavoltamp_data[0], yerr=error_data
+    stefan_model = stefan_func(temper_quart_data, popt)
+    plt.errorbar(temper_quart_data, areavoltamp_data[0], yerr=error_data
                  , fmt='.')
-    plt.plot(temper_data, stefan_model)
+    plt.plot(temper_quart_data, stefan_model)
     #amp error is approximately +- 0.01A
