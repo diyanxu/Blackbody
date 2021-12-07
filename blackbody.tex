@@ -106,29 +106,38 @@ the following equation
     T = 300K + \frac{\frac{V / I}{R_0} - 1}{\alpha_0}
 \end{align*}
 Using the above equation we calculated temperature values $T$ in Table 1.
-
-%TODO: gonna insert data later
 \begin{center}
     \begin{tabular}{ c | c | c | c | c}
-     $\theta_{peak}$ & Current ($A$) & Index & $\lambda_{\max}$ & $T$\\
-     \hline 
-     cell4 & cell5 & cell6 &  &\\  
-     cell7 & cell8 & cell9 &  &
+    $\theta_{peak}$ & Current ($A$) & Index & $\lambda_{\max} (nm)$ & Temperature($K$)\\
+    \hline 
+    23.314  &  0.429  &  1.701788  &  1042.53  &  2432.325 \\
+    23.397  &  0.428  &  1.700997  &  1076.38  &  2437.826 \\
+    23.667  &  0.429  &  1.698410  &  1215.33  &  2432.325 \\
+    23.345  &  0.425  &  1.701493  &  1054.79  &  2454.486 \\
+    23.538  &  0.428  &  1.699648  &  1142.51  &  2437.826 
     \end{tabular}
     \captionof{table}{Constant Voltage $V = 5V$}
 \end{center}
-
 \newpage
-
 \subsubsection*{Use data from Wien's Law and calculate the average value of $T\times \lambda_{\exp}$.
 How does it compare with Wien's Displacement Law}
 Using data calculated from Table 1, we can calculate the average $\lambda_{\max}$
-to be $\overline{\lambda_{\max}} = $, and the average $T$ is $\overline{T} = $.
+to be $\overline{\lambda_{\max}} = 1106 \pm 72 nm$, and the average $T$ is 
+$\overline{T} = 2439 \pm 9 K$.
 The error is calcualted to be the sample standard deviation. Multiplying these
 values together we get
 \begin{align*}
-    \text{math here with error prop}
+    \lambda * T &= 1.106\time 10^{-6}m * 2439 K\\
+    &= 2.698 \times 10^{-3} m\cdot K
 \end{align*}
+We would have an error of
+\begin{align*}
+    \sigma &= 2.698 \times 10^{-3} \cdot \sqrt{\big(\frac{72}{1106}\big)^2 + 
+    \big(\frac{9}{2439}\big)^2 }\\
+    &= 1.759 \times 10^{-4}
+\end{align*}
+So our experimental Wien's law value is $2.698 \times 10^{-3} \pm 1.759 
+\times 10^{-4} m\cdot K$
 
 \subsubsection*{Question with S-B plots here}
 
