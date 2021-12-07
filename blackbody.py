@@ -14,6 +14,9 @@ def temper_fourth_error_func(v, i, di, tq):
 def stefan_func(x, a):
     return a*x
 
+def reduced_chisquared(data_y, model_y, data_error, dof):
+    return (1/(data_y.size-dof))*np.sum(((data_y-model_y)/data_error)**2)
+
 
 if __name__ == '__main__':
     #loading data
@@ -40,3 +43,4 @@ if __name__ == '__main__':
     plt.xlabel('Temperature^4')
     plt.ylabel('Area')
     plt.legend()
+    print(reduced_chisquared(area_data, stefan_model, area_error, 1))
