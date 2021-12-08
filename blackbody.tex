@@ -61,7 +61,7 @@ Equipment used for the experiment are as follows
 \end{itemize}
 For the first part of this lab regarding Wien's Displacement Law, we turn on the 
 signal generator and we place the Broad Spectrum Light Sensor at the stop with gain 
-set to "x10."  Then, when the room was dark, we turn acquisition on in the Blackbody
+set to x10.  Then, when the room was dark, we turn acquisition on in the Blackbody
 Radiation Labview application set to 30 degrees and some voltage and begin moving 
 the Broad Spectrum Light Sensor until the acquisition automatically stops.  After that
 we record the angle where the intensity appears to be at its max and the average voltage 
@@ -139,7 +139,21 @@ We would have an error of
 So our experimental Wien's law value is $2.698 \times 10^{-3} \pm 1.759 
 \times 10^{-4} m\cdot K$
 
-\subsubsection*{Question with S-B plots here}
+\subsubsection*{Use data from Stefan-Boltzmann Law and plot: Area vs. $T^4$. How 
+well does your (qualitative) graph compares with the Stefan-Boltzmann Law?}
+Using the data we collected, we calculated $T^4$, using the same equation that was 
+previously used in the analysis, for each of our data points.  With the area and $T^4$
+data, we can use curve fit to find a constant $a$ to be used in a model function given by,
+\[f(x)=ax\] Where the temperature to the power of four, $x$, is the independent variable, 
+and the area under the intensity curve, $f$, is the dependent variable.  With the data and 
+the model function we can plot the following graph in figure 1,
+%%%%%%%%%%%%%%%%%%insert graph%%%%%%%%%%%%%%%%%%%%%%%%%%
+We can see in the graph that our data seems to follow the Stefan-Boltzmann Law equation in 
+the sense that the area increases linearly with temperature to the power of four.  However,
+it is possible that our data might not continue increasing linearly considering how our data
+has $\chi^2_{red}=1.43$ which is greater than 1 and the last two data points do not have 
+the model function value within the range of their y error.
+
 
 \newpage
 \subsubsection*{How did the colour of the bulb change with temperature? How did
@@ -162,6 +176,14 @@ all the colours of light thus appearing white, while for lower temperatures
 
 
 \section{Conclusion}
-LMAO KEKW I GOT THE RIVER PROBLEMS TO DO NOW
+When testing Wien's Displacement Law, the value for $\lambda_{max}T$ that we obtained 
+using our data was $2.698 \times 10^{-3} \pm 1.759 \times 10^{-4} m\cdot K$ which contains 
+the actual value of $\lambda_{max}T$ in Wien's Displacement Law, which is $2.898 \times 
+10^{-3} m\cdot K$, within approximately 1.137 standard deviations.  When testing the 
+Stefan-Boltzmann Law, we were able to plot the graph in figure 1 which shows that, at least 
+for our data points considering the fairly high $\chi^2_{red}$ of 1.43, the area under 
+the peak of the intensity vs angle graphs we obtained increases linearly with $T^4$ like 
+the total intensity radiated within all wavelengths which is given by the Stefan-Boltzmann Law.
+
 
 \end{document}
