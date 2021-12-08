@@ -63,6 +63,9 @@ if __name__ == '__main__':
     plt.xlabel('Temperature^4')
     plt.ylabel('Area')
     plt.legend()
+
+    plt.savefig('graphs/stefan.png')
+
     print(reduced_chisquared(area_data, stefan_model, area_error, 1))
 
     volts = 5

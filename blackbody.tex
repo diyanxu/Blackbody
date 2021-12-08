@@ -147,13 +147,17 @@ data, we can use curve fit to find a constant $a$ to be used in a model function
 \[f(x)=ax\] Where the temperature to the power of four, $x$, is the independent variable, 
 and the area under the intensity curve, $f$, is the dependent variable.  With the data and 
 the model function we can plot the following graph in figure 1,
-%%%%%%%%%%%%%%%%%%insert graph%%%%%%%%%%%%%%%%%%%%%%%%%%
-We can see in the graph that our data seems to follow the Stefan-Boltzmann Law equation in 
+we can see in the graph that our data seems to follow the Stefan-Boltzmann Law equation in 
 the sense that the area increases linearly with temperature to the power of four.  However,
 it is possible that our data might not continue increasing linearly considering how our data
 has $\chi^2_{red}=1.43$ which is greater than 1 and the last two data points do not have 
 the model function value within the range of their y error.
 
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.7]{graphs/stefan.png}
+    \caption{}
+\end{figure}
 
 \newpage
 \subsubsection*{How did the colour of the bulb change with temperature? How did
@@ -172,8 +176,23 @@ changes, in the spectrum of visible light the lower wavelengths appear has
 all the colours of light thus appearing white, while for lower temperatures 
 (higher wavelengths) would result in more red colours.
 
-\subsubsection*{Last question all you}
+\newpage
 
+\subsubsection*{For the highest temperature, is more of the intensity in the visible
+part of the spectrum? How can a light bulb be made more efficient so it puts
+out more light in the visible}
+The highest temperature occurs when we set the voltage to be 10$V$, at this given
+voltage we would have a temperature of $3249.21 K$. By Wien's law, this means that
+the wavelength at the peak of the curve would be $8.91\times10^{-7}m$ or $891nm$.
+Since the peak is observed to happen at around the center of the curve (drawing
+a line a the peak would split the curve into 2 relatively equal parts), and the
+peak wavelength is already past the highest wavelengths of light in the visible
+spectrum (red light at around $700 nm$), we can conclude that most of the intensity
+is not in the visible spectrum. One way to make lightbulbs more efficient to output
+more light in the visible would be to change the lighbulb surface so that it would
+release more energy as light rather than just heat.
+
+\newpage
 
 \section{Conclusion}
 When testing Wien's Displacement Law, the value for $\lambda_{max}T$ that we obtained 
